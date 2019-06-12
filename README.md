@@ -6,7 +6,7 @@ todo OCaml L-System, parser with ocamllex and ocamlyacc
 
 todo example code
 
-![result-plant-1](./results/plant_1_4.png)
+![result-plant-1](./results/plant_1.png)
 ./lsys samples/plant_1.txt 4
 
 ![result-von-koch4](./results/von_koch.png)
