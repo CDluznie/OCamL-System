@@ -1,0 +1,12 @@
+Init : 
+	A;
+	 
+Hered :
+	A -> A A G [G A D A D A] D [D A G A G A];
+	
+Inter :
+	A -> Line 8;
+	G -> Turn 25;
+	D -> Turn -25;
+
+

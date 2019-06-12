@@ -1,0 +1,12 @@
+Init : 
+	F;
+	 
+Hered :
+	F -> F G F D D F G F;
+	
+Inter :
+	F -> Line 3;
+	G -> Turn 45;
+	D -> Turn -45;
+
+

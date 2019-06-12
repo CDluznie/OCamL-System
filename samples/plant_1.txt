@@ -1,0 +1,10 @@
+Init : 
+	F;
+	 
+Hered :
+	F -> F [PF] F [MF] F;
+	
+Inter :
+	F -> Line 6;
+	P -> Turn 25;
+	M -> Turn -25;

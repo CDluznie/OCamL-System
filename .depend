@@ -1,0 +1,13 @@
+parser.cmi : bracketed.cmo
+bracketed.cmo : turtle.cmo geometric.cmo
+bracketed.cmx : turtle.cmx geometric.cmx
+geometric.cmo :
+geometric.cmx :
+lexer.cmo : parser.cmi
+lexer.cmx : parser.cmx
+lsys.cmo : turtle.cmo parser.cmi lexer.cmo geometric.cmo bracketed.cmo
+lsys.cmx : turtle.cmx parser.cmx lexer.cmx geometric.cmx bracketed.cmx
+parser.cmo : turtle.cmo bracketed.cmo parser.cmi
+parser.cmx : turtle.cmx bracketed.cmx parser.cmi
+turtle.cmo : geometric.cmo
+turtle.cmx : geometric.cmx
