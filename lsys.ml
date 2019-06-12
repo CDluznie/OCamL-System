@@ -18,27 +18,32 @@ let draw_system system inter alpha_init =
 	draw centered_drawing;	
 ;;
 
-let lsys init hered inter n =
-	let alpha_init = 0 in
+let lsys init hered inter n alpha =
 	let system = iterate n init hered in
 	open_graph "";
-	draw_system system inter alpha_init;
+	draw_system system inter alpha;
 	ignore (wait_next_event [Button_down]);
 	close_graph ()
 ;;
 
 let _ =
-	if Array.length argv != 3 then
-		failwith ("Usage : " ^ argv.(0) ^ " filename n")
+	if Array.length argv != 3 && Array.length argv != 4 then
+		failwith ("Usage : " ^ argv.(0) ^ " filename n [angle]")
 	else try
 		let file_drawing = open_in argv.(1) in 
 		let init , hered , inter = Parser.main Lexer.token (Lexing.from_channel file_drawing) in
 		let n = int_of_string argv.(2) in
-		lsys init hered inter n		
+		let angle = 
+			if Array.length argv == 4 then
+				int_of_string argv.(3)
+			else
+				0
+		in
+		lsys init hered inter n angle		
 	with 
 	| Graphics.Graphic_failure _ -> ()
 	| Failure "int_of_string" ->
-		print_string ("argument 'n' have to be a number (here '" ^ argv.(2) ^ "')");
+		print_string "argument 'n' and 'angle' have to be numbers";
 		print_newline()
 	| Sys_error err 
 	| Failure err ->
