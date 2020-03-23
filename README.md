@@ -6,7 +6,7 @@ An OCaml L-System visualizer, with an ocamllex and ocamlyacc parser.
 The program take as input the file that define the L-System grammar and the number of iterations, then display the result figure on a window.
 An optional angle can be given to apply a rotation to the figure. 
 
-#### Exemple :
+#### Example :
 
 Here an exemple of grammar file for the L-System :
 ```
