@@ -21,9 +21,9 @@ Inter :
 	P -> Turn 25;
 	M -> Turn -25;
 ```
-* The rule `Init` indicate the initial state of the system (here *F*).
-* The rule `Hered` indicate how we compute the next state of the system (here the *F* becomes *F [PF] F [MF] F*).
-* The rule `Hered` indicate how to draw the system. You can use the symbols **Line** to move forward and draw a line, **Move** to move forward without drawing a line and **Turn** to do a rotation (here *F* mean to draw a line of length 6, *P* a rotation of angle 25 and *M* a rotation of angle 25).
+* The `Init` rule indicate the initial state of the system (here *F*).
+* The `Hered` rule indicate how we compute the next state of the system (here the *F* becomes *F [PF] F [MF] F*).
+* The `Inter` rule indicate how to draw the system. You can use the symbols **Line** to move forward and draw a line, **Move** to move forward without drawing a line and **Turn** to do a rotation (here *F* mean to draw a line of length 6, *P* a rotation of angle 25 and *M* a rotation of angle 25).
 	
 
 If we display this L-System (*samples/plant_1.txt*) with the command `./lsys samples/plant_1.txt 4` we obtain this figure :
